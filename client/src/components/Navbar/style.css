@@ -1,0 +1,12 @@
+#navbar {
+    background: white;
+}
+
+nav ul a {
+    color: #1876D2;
+}
+
+a.brand-logo.blue-text.text-darken-2 {
+    padding: 0 1rem;
+}
+

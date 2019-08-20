@@ -1,0 +1,15 @@
+#header {
+    width: 100%;
+    padding: 2rem 2rem 0 2rem;
+}
+
+#header .card .card-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header .card .card-content .card-title { 
+    font-size: 35px;
+}
