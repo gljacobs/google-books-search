@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
-import SearchCard from './components/SearchCard';
-import ResultsCard from './components/ResultsCard';
+import Home from './pages/Home';
 
 class App extends Component {
   render() {
@@ -11,8 +10,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Header />
-        <SearchCard />
-        <ResultsCard />
+        <Home />
       </div>
     );
   }
