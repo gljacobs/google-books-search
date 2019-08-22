@@ -8,9 +8,21 @@ class Home extends React.Component {
         books: []
     }
 
-    handleSearch= (event, input) => {
+    handleSearch = (event, input) => {
         event.preventDefault();
-        API.getBooks(input).then(res => this.setState({books: res.data.items}))
+        API.getBooks(input).then(res => this.setState(
+            {
+                books: res.data.items.filter(
+                    result =>
+                      result.volumeInfo.title &&
+                      result.volumeInfo.infoLink &&
+                      result.volumeInfo.authors &&
+                      result.volumeInfo.description &&
+                      result.volumeInfo.imageLinks &&
+                      result.volumeInfo.imageLinks.thumbnail
+                )          
+            })
+        );
     }
 
     render() {

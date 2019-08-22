@@ -3,9 +3,7 @@ import './style.css';
 
 function ResultsCard(props) {
 
-
     return (
-        // <div className="container">
         <div className="row">
             <div id="results" className="col s12 m6">
                 <div className="card">
@@ -24,8 +22,8 @@ function ResultsCard(props) {
                                                 <span>Written By: {book.volumeInfo.authors.join(", ")}</span>
                                             </div>
                                             <div className="row center-align">
-                                                <img className="col s2" src={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"} alt="" />
-                                                <p className="col s10">{book.volumeInfo.description ? book.volumeInfo.description : "No description found.."}</p>
+                                                <img className="col s2" src={book.volumeInfo.imageLinks.thumbnail} alt="" />
+                                                <p className="col s10">{book.volumeInfo.description}</p>
                                             </div>
                                         </li>
                                     </ul>
@@ -36,7 +34,6 @@ function ResultsCard(props) {
                 </div>
             </div>
         </div>
-        // </div>
     )
 }
 
