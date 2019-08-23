@@ -8,15 +8,18 @@ function ResultsCard(props) {
             <div id="results" className="col s12 m6">
                 <div className="card">
                     <div className="card-content">
-                        <span className="card-title">Results</span>
+                        <span className="card-title">{props.saved ? "Saved" : "Results"}</span>
                         <br />
-                        {
+                        {   
+                            !props.books ? "No results, use the searchbar above to look up a book." :
                             props.books.map((book) => {
                                 return(
                                     <ul className="collection">
                                         <li className="collection-item">
-                                            <div className="row">
-                                                <h5 className="title">{book.volumeInfo.title}</h5>
+                                            <div id="title" className="row">
+                                                <h5 className="title col s9">{book.volumeInfo.title}</h5>
+                                                <a class="waves-effect waves-light btn">Save</a>
+                                                <a class="waves-effect waves-light btn" href={book.volumeInfo.infoLink} target="_blank">View</a>
                                             </div>
                                             <div className="row">
                                                 <span>Written By: {book.volumeInfo.authors.join(", ")}</span>

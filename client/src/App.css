@@ -1,4 +1,4 @@
-.btn {
+.btn, .btn:focus {
     background: #1876D2;
 }
 

@@ -5,7 +5,7 @@ import API from '../utils/API'
 
 class Home extends React.Component {
     state = {
-        books: []
+        books: null,
     }
 
     handleSearch = (event, input) => {
@@ -29,7 +29,7 @@ class Home extends React.Component {
         return (
             <div>
                 <SearchCard handleSubmit={this.handleSearch}/>
-                <ResultsCard books={this.state.books}/>
+                <ResultsCard books={this.state.books} saved={false}/>
             </div>
         );
     }
