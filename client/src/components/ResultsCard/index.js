@@ -18,7 +18,7 @@ function ResultsCard(props) {
                                         <li className="collection-item">
                                             <div id="title" className="row">
                                                 <h5 className="title col s9">{book.volumeInfo.title}</h5>
-                                                <a class="waves-effect waves-light btn">Save</a>
+                                                <a class="waves-effect waves-light btn">{props.save ? "Delete" : "Save"}</a>
                                                 <a class="waves-effect waves-light btn" href={book.volumeInfo.infoLink} target="_blank">View</a>
                                             </div>
                                             <div className="row">
