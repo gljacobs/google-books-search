@@ -25,11 +25,26 @@ class Home extends React.Component {
         );
     }
 
+    handleSave = id => {
+        const book = this.state.books.find(book => book.id === id);
+        console.log(id);
+        
+        API.saveBook({
+          googleId: book.id,
+          title: book.volumeInfo.title,
+          link: book.volumeInfo.infoLink,
+          authors: book.volumeInfo.authors,
+          description: book.volumeInfo.description,
+          image: book.volumeInfo.imageLinks.thumbnail
+        });
+    };
+    
+
     render() {
         return (
             <div>
                 <SearchCard handleSubmit={this.handleSearch}/>
-                <ResultsCard books={this.state.books} saved={false}/>
+                <ResultsCard books={this.state.books} saved={false} handleSave={this.handleSave}/>
             </div>
         );
     }

@@ -8,3 +8,5 @@ router.route("/")
 router.route("/:id")
     .get(bookController.findById)
     .delete(bookController.remove);
+
+module.exports = router;

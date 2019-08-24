@@ -17,16 +17,16 @@ function ResultsCard(props) {
                                     <ul className="collection">
                                         <li className="collection-item">
                                             <div id="title" className="row">
-                                                <h5 className="title col s9">{book.volumeInfo.title}</h5>
-                                                <a class="waves-effect waves-light btn">{props.save ? "Delete" : "Save"}</a>
-                                                <a class="waves-effect waves-light btn" href={book.volumeInfo.infoLink} target="_blank">View</a>
+                                                <h5 className="title col s9">{props.saved ? book.title : book.volumeInfo.title}</h5>
+                                                <a className="waves-effect waves-light btn" onClick={() => props.handleSave(book.id)}>{props.saved ? "Delete" : "Save"}</a>
+                                                <a className="waves-effect waves-light btn" href={props.saved ? book.link :book.volumeInfo.infoLink} target="_blank">View</a>
                                             </div>
                                             <div className="row">
-                                                <span>Written By: {book.volumeInfo.authors.join(", ")}</span>
+                                                <span>Written By: {props.saved ? book.authors : book.volumeInfo.authors.join(", ")}</span>
                                             </div>
                                             <div className="row center-align">
-                                                <img className="col s2" src={book.volumeInfo.imageLinks.thumbnail} alt="" />
-                                                <p className="col s10">{book.volumeInfo.description}</p>
+                                                <img className="col s2" src={props.saved ? book.image : book.volumeInfo.imageLinks.thumbnail} alt="" />
+                                                <p className="col s10">{props.saved ? book.description : book.volumeInfo.description}</p>
                                             </div>
                                         </li>
                                     </ul>
