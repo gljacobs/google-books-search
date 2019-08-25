@@ -18,7 +18,7 @@ function ResultsCard(props) {
                                         <li className="collection-item">
                                             <div id="title" className="row">
                                                 <h5 className="title col s9">{props.saved ? book.title : book.volumeInfo.title}</h5>
-                                                <a className="waves-effect waves-light btn" onClick={() => props.handleSave(book.id)}>{props.saved ? "Delete" : "Save"}</a>
+                                                <a className="waves-effect waves-light btn" onClick={() => props.handleSaveDelete(book._id || book.id)}>{props.saved ? "Delete" : "Save"}</a>
                                                 <a className="waves-effect waves-light btn" href={props.saved ? book.link :book.volumeInfo.infoLink} target="_blank">View</a>
                                             </div>
                                             <div className="row">

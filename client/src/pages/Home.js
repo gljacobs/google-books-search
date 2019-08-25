@@ -44,7 +44,7 @@ class Home extends React.Component {
         return (
             <div>
                 <SearchCard handleSubmit={this.handleSearch}/>
-                <ResultsCard books={this.state.books} saved={false} handleSave={this.handleSave}/>
+                <ResultsCard books={this.state.books} saved={false} handleSaveDelete={this.handleSave}/>
             </div>
         );
     }
