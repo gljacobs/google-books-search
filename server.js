@@ -24,7 +24,7 @@ app.use(routes);
 // });
 
 mongoose.connect(
-  'mongodb://localhost:27017/googlebooks',
+  process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines",
   {
     useCreateIndex: true,
     useNewUrlParser: true
