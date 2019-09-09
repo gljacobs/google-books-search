@@ -2,7 +2,7 @@
 
 <h4 align="center">Full stack application<h4>
 
-![alt text](./scrnsht.png "Google Book Search")
+![alt text](./scrnshot.png "Google Book Search")
 
 ## Description
 
@@ -22,7 +22,7 @@ This App is deployed on Heroku: [Google Books Search](https://limitless-reaches-
 MVC design pattern: Model, View, Controller.
 
 <h2 align="center">
-<img alt="mern" src="client/public/images/mern.jpg" width="50%">
+    MERN Full-Stack Application
 </h2>
 
 - [MongoDB](mongodb.com)
