@@ -2,7 +2,7 @@
 
 <h4 align="center">Full stack application<h4>
 
-![alt text](client/public/scrnsht.png "Google Book Search")
+![alt text](./client/public/scrnsht.png "Google Book Search")
 
 ## Description
 
@@ -29,7 +29,7 @@ MVC design pattern: Model, View, Controller.
 - [Express.js](https://expressjs.com)
 - [React.js](https://reactjs.org/)
 - [Node.js](https://nodejs.org/en/)
-- [Materialize-CSS]
+- [Materialize-CSS](https://materializecss.com/)
 
 ## Author
 
