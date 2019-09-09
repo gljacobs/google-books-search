@@ -2,7 +2,7 @@
 
 <h4 align="center">Full stack application<h4>
 
-![alt text](./client/public/scrnsht.png "Google Book Search")
+![alt text](./scrnsht.png "Google Book Search")
 
 ## Description
 
